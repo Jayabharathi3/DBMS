@@ -1,8 +1,7 @@
 # EXP NO 2: DATA DEFINITION LANGUGE COMMANDS 
-### DATE
+### DATE:06.03.2024
 ## AIM:
 To create a student database and execute DDL queries using SQL.
-
 
 ## THEORY
 ### DDL (Data Definition Language)
@@ -21,54 +20,47 @@ To create a student database and execute DDL queries using SQL.
 5. RENAME: This is used to rename an object existing in the database.
 
 ## Query:
-### 1) Create a database studentdb
 
-### SQL QUERY:
-
-### OUTPUT:
-
-### 2) Create a table student  and insert any two rows with the following fieds RegisterNumber,Name,Age,Address,Phone number
+### 1) Create a table student  and insert any two rows with the following fieds RegisterNumber,Name,Age,Address,Phone number
 
 ### SQL QUERY: 
-
-
+```
+create table student(reg_no int,name varchar(20),age int,address varchar(255),ph_no int);
+```
 ### OUTPUT:
+![Screenshot 2024-03-13 105956](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/358e5550-9731-4b7c-84e3-08735bc50107)
 
-### 3) Alter the above student table by adding another attribute department
+### 2) Alter the above student table by adding another attribute department
 
 ### SQL QUERY: 
-
+```
+alter table student add department varchar(20);
+```
 ### OUTPUT:
+![Screenshot 2024-03-13 110017](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/cd862501-bda1-4f53-8b1c-d32d7d0c4a8d)
 
-### 4) Rename the student table to mystudent
+### 3) Rename the student table to mystudent
 
 ### SQL QUERY: 
-
-
-
+```
+alter table student rename to mystudent1;
+```
 ### OUTPUT:
-
-### 5) Delete the mystudent rows using truncate keyword
-
-### SQL QUERY: 
+![Screenshot 2024-03-13 110017](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/03389f22-d94e-4bae-966c-1ba1db316689)
 
 
-### OUTPUT:
 ### 4) Drop the mystudent table
  
 ### SQL QUERY: 
-
+```
+drop table mystudent1;
+```
 
 ### OUTPUT:
-
-
-
-
-
-
+![Screenshot 2024-03-13 110034](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/124136ca-aff8-4f30-bf13-ab050a90a552)
 
 
 ## Result:
-         Thus the basic DDL commands in SQL are executed. 
+Thus the basic DDL commands in SQL are executed. 
 
 
