@@ -1,5 +1,5 @@
 # EXP NO 2: DATA DEFINITION LANGUGE COMMANDS 
-### DATE
+### DATE : 06.03.2024
 ## AIM:
 To create a student database and execute DDL queries using SQL.
 
@@ -21,50 +21,48 @@ To create a student database and execute DDL queries using SQL.
 5. RENAME: This is used to rename an object existing in the database.
 
 ## Query:
-### 1) Create a database studentdb
 
-### SQL QUERY:
-
-### OUTPUT:
-
-### 2) Create a table student  and insert any two rows with the following fieds RegisterNumber,Name,Age,Address,Phone number
+### 1) Create a table student  and insert any two rows with the following fieds RegisterNumber,Name,Age,Address,Phone number
 
 ### SQL QUERY: 
-
+```SQL
+ create table student(RegisterNumber int,Name varchar(100),Age int,Address varchar(250),PhoneNumber int) ;
+```
 
 ### OUTPUT:
+![image](https://github.com/Jayabharathi3/DBMS/assets/120367796/3b2ea28e-b13f-44f6-aede-bf9c1eda44da)
 
-### 3) Alter the above student table by adding another attribute department
+### 2) Alter the above student table by adding another attribute department
 
 ### SQL QUERY: 
+```
+ alter table student add dept varchar(20);
+```
 
 ### OUTPUT:
+![image](https://github.com/Jayabharathi3/DBMS/assets/120367796/64c4a805-220f-4d16-b47e-439959808b5b)
 
-### 4) Rename the student table to mystudent
+
+### 3) Rename the student table to mystudent
 
 ### SQL QUERY: 
-
-
-
+```SQL
+alter table student rename to student1;
+```
 ### OUTPUT:
 
-### 5) Delete the mystudent rows using truncate keyword
+![image](https://github.com/Jayabharathi3/DBMS/assets/120367796/84cd3e30-6347-4a6e-97b8-20d2ea033dd6)
 
-### SQL QUERY: 
-
-
-### OUTPUT:
 ### 4) Drop the mystudent table
- 
 ### SQL QUERY: 
 
+```SQL
+ drop table student1;
 
+```
 ### OUTPUT:
 
-
-
-
-
+![image](https://github.com/Jayabharathi3/DBMS/assets/120367796/5f948625-f601-407a-b9c0-7833e51a999c)
 
 
 
