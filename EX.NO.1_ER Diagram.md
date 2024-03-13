@@ -1,9 +1,9 @@
 # EXP NO 1: ER DIAGRAM CREATION, RELATIONAL MODEL AND SCHEMA GENERATION  
-### DATE
+### DATE:06.03.2024
 ## AIM:
-<div align="justify">
+
    To create a ER Diagram for Bank management system or College management system using ERD Plus tool and generate the relational model with schema. 
-</div>
+
 
 ## Algorithm
 1. Create a login with https://erdplus.com.
@@ -13,14 +13,130 @@
 5. Specify attributes unique, multivalued and composite attributes.
 
 ### ER Diagram 
-
+![image](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/1d7fe6ad-df3d-4d0e-9a9b-070f1c36eb33)
 
 ### Relational model
-
+![image (1)](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/26508391-7cbc-4dc3-a961-b28edd14344c)
 
 ### SQL DDL Schema 
+```
+Developed By:DHANUMALYA.D
+Register Number:212222230030
+```
+```
+CREATE TABLE Programs
+(
+  pro_id INT NOT NULL,
+  pro_name INT NOT NULL,
+  pro_dept INT NOT NULL,
+  PRIMARY KEY (pro_id)
+);
 
+CREATE TABLE Courses
+(
+  course_no INT NOT NULL,
+  co_name INT NOT NULL,
+  credits INT NOT NULL,
+  PRIMARY KEY (course_no)
+);
+
+CREATE TABLE Instructors
+(
+  staff_no INT NOT NULL,
+  staff_name INT NOT NULL,
+  PRIMARY KEY (staff_no)
+);
+
+CREATE TABLE Students
+(
+  adm_n0 INT NOT NULL,
+  stu_name INT NOT NULL,
+  age INT NOT NULL,
+  phone INT NOT NULL,
+  email INT NOT NULL,
+  PRIMARY KEY (adm_n0)
+);
+
+CREATE TABLE slots
+(
+  sem INT NOT NULL,
+  year INT NOT NULL,
+  room_no INT NOT NULL,
+  Date_and_Time INT NOT NULL,
+  adm_n0 INT NOT NULL,
+  PRIMARY KEY (Date_and_Time),
+  FOREIGN KEY (adm_n0) REFERENCES Students(adm_n0)
+);
+
+CREATE TABLE Teaches
+(
+  Date_and_Time INT NOT NULL,
+  staff_no INT NOT NULL,
+  PRIMARY KEY (Date_and_Time, staff_no),
+  FOREIGN KEY (Date_and_Time) REFERENCES slots(Date_and_Time),
+  FOREIGN KEY (staff_no) REFERENCES Instructors(staff_no)
+);
+
+CREATE TABLE prerequisites
+(
+  pro_id INT NOT NULL,
+  course_no INT NOT NULL,
+  PRIMARY KEY (pro_id, course_no),
+  FOREIGN KEY (pro_id) REFERENCES Programs(pro_id),
+  FOREIGN KEY (course_no) REFERENCES Courses(course_no)
+);
+
+CREATE TABLE convenient
+(
+  course_no INT NOT NULL,
+  Date_and_Time INT NOT NULL,
+  PRIMARY KEY (course_no, Date_and_Time),
+  FOREIGN KEY (course_no) REFERENCES Courses(course_no),
+  FOREIGN KEY (Date_and_Time) REFERENCES slots(Date_and_Time)
+);
+
+CREATE TABLE Instructors_contact_no
+(
+  contact_no INT NOT NULL,
+  staff_no INT NOT NULL,
+  PRIMARY KEY (contact_no, staff_no),
+  FOREIGN KEY (staff_no) REFERENCES Instructors(staff_no)
+);
+
+CREATE TABLE Departments
+(
+  Dname INT NOT NULL,
+  HOD INT NOT NULL,
+  Dphone INT NOT NULL,
+  staff_no INT NOT NULL,
+  adm_n0 INT NOT NULL,
+  PRIMARY KEY (Dname),
+  FOREIGN KEY (staff_no) REFERENCES Instructors(staff_no),
+  FOREIGN KEY (adm_n0) REFERENCES Students(adm_n0)
+);
+
+CREATE TABLE Offers
+(
+  Dname INT NOT NULL,
+  pro_id INT NOT NULL,
+  PRIMARY KEY (Dname, pro_id),
+  FOREIGN KEY (Dname) REFERENCES Departments(Dname),
+  FOREIGN KEY (pro_id) REFERENCES Programs(pro_id)
+);
+
+CREATE TABLE College
+(
+  Cname INT NOT NULL,
+  Cphone INT NOT NULL,
+  Coffice INT NOT NULL,
+  Dname INT NOT NULL,
+  staff_no INT NOT NULL,
+  PRIMARY KEY (Cname),
+  FOREIGN KEY (Dname) REFERENCES Departments(Dname),
+  FOREIGN KEY (staff_no) REFERENCES Instructors(staff_no)
+);
+```
 ## RESULT 
-<div align="justify">
+
 Thus the ER diagram was drawn and relational diagram, SQL DDL staements are generated using ERD plus tool.
-</div>
+
