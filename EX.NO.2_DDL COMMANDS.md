@@ -43,17 +43,26 @@ alter table student add department varchar(20);
 
 ### SQL QUERY: 
 ```
-alter table student rename to mystudent1;
+alter table student rename to mystudent;
 ```
 ### OUTPUT:
 ![Screenshot 2024-03-13 110017](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/03389f22-d94e-4bae-966c-1ba1db316689)
 
+### 5) Delete the mystudent rows using truncate keyword
 
-### 4) Drop the mystudent table
+### SQL QUERY:
+```
+truncate table mystudent;
+```
+## OUTPUT:
+![Screenshot 2024-03-17 234108](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/d7af6535-cc3c-4e6c-bef2-e7b42d7e389e)
+
+
+### 5) Drop the mystudent table
  
 ### SQL QUERY: 
 ```
-drop table mystudent1;
+drop table mystudent;
 ```
 
 ### OUTPUT:
