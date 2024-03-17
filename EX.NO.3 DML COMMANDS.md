@@ -1,4 +1,4 @@
-# EX 3 Data Manipulation Language (DML) Commands and built in functions in SQL
+# EX.NO:3 Data Manipulation Language (DML) Commands and built in functions in SQL
 ## AIM:
 To create a manager database and execute DML queries using SQL.
 
