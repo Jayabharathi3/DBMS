@@ -48,7 +48,7 @@ alter table student rename to mystudent;
 ### OUTPUT:
 ![Screenshot 2024-03-13 110017](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/03389f22-d94e-4bae-966c-1ba1db316689)
 
-### 5) Delete the mystudent rows using truncate keyword
+### 4) Delete the mystudent rows using truncate keyword
 
 ### SQL QUERY:
 ```
