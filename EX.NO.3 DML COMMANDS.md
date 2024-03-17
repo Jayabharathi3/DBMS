@@ -33,6 +33,7 @@ update manager
 set salary = salary + (salary * 10/100)
 ```
 ### OUTPUT:
+![Screenshot 2024-03-18 001458](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/c6714427-2090-4951-bb65-667c07344ffa)
 
 
 ### Q2) Delete the records from manager table where the salary less than 2750.
@@ -45,6 +46,7 @@ where salary < 2750
 ```
 
 ### OUTPUT:
+![Screenshot 2024-03-18 001512](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/c65ecf59-fba6-422f-bf9c-84c2dadba197)
 
 ### Q3) Display each name of the employee as “Name” and annual salary as “Annual Salary” (Note: Salary in emp table is the monthly salary)
 
@@ -55,6 +57,7 @@ select ename as "Name",salary*12 as annualsalary from manager;
 ```
 
 ### OUTPUT:
+![Screenshot 2024-03-18 001534](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/75fb8c3b-a485-4174-9888-0fd622ecb82a)
 
 ### Q5)	List the names of Clerks from emp table.
 
@@ -65,6 +68,7 @@ select ename from manager where designation = 'clerk';
 ```
 
 ### OUTPUT:
+![Screenshot 2024-03-18 001651](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/ccc091c5-65b4-43db-8f74-17bab4a433d1)
 
 
 ### Q6)	List the names of employee who are not Managers.
@@ -76,6 +80,7 @@ select ename from manager where designation != 'manager';
 ```
 
 ### OUTPUT:
+![Screenshot 2024-03-18 001651](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/72f8975f-2f6e-4abb-a688-ab612e3df4f5)
 
 
 ### Q7)	List the names of employees not eligible for commission.
@@ -84,10 +89,10 @@ select ename from manager where designation != 'manager';
 ### QUERY:
 ```
 select ename from manager where commission = 0;
-
 ```
 
 ### OUTPUT:
+![Screenshot 2024-03-18 001706](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/6c1c5939-9073-4632-9904-23246e08d3cf)
 
 
 ### Q8)	List employees whose name either start or end with ‘s’.
@@ -96,10 +101,10 @@ select ename from manager where commission = 0;
 ### QUERY:
 ```
 select ename from manager where ename like 'S%' or ename like '%S';
-
 ```
 
 ### OUTPUT:
+![Screenshot 2024-03-18 001722](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/e522bf62-0189-4fe8-91ae-17fa69382d4f)
 
 
 ### Q9) Sort emp table in ascending order by hire-date and list ename, job, deptno and hire-date.
@@ -108,10 +113,10 @@ select ename from manager where ename like 'S%' or ename like '%S';
 ### QUERY:
 ```
 select Hiredate,ename,designation,deptno from manager order by Hiredate;
-
 ```
 
 ### OUTPUT:
+![Screenshot 2024-03-18 001749](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/b355e5b4-aa7e-497c-8ed0-1b94c445728d)
 
 
 ### Q10) List the Details of Employees who have joined before 30 Sept 81.
@@ -123,6 +128,7 @@ select * from manager where hiredate<to_date('1981-09-30','YYYY-MM-DD');
 ```
 
 ### OUTPUT:
+![Screenshot 2024-03-18 001820](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/34ed9b88-ecb3-47e5-8e1d-a4c0c882b429)
 
 
 ### Q11)	List ename, deptno and sal after sorting emp table in ascending order by deptno and then descending order by sal.
@@ -135,6 +141,7 @@ select ename,deptno,salary from manager order by deptno,salary desc;
 ```
 
 ### OUTPUT:
+![Screenshot 2024-03-18 001842](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/38334474-b173-4914-94f6-fac2731130bd)
 
 
 ### Q12) List the names of employees not belonging to dept no 30,40 & 10
@@ -147,6 +154,7 @@ select ename from manager where deptno != 30 and deptno != 40 and deptno != 10;
 ```
 
 ### OUTPUT:
+![Screenshot 2024-03-18 001900](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/89f16adb-562c-4624-8313-33908998a737)
 
 ### Q13) Find number of rows in the table EMP
 
@@ -157,6 +165,7 @@ select count (*) as count_ename from manager;
 ```
 
 ### OUTPUT:
+![Screenshot 2024-03-18 001913](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/12cce17d-9bb4-4aa9-9d05-2c90d96ead22)
 
 
 ### Q14) Find maximum, minimum and average salary in EMP table.
@@ -166,21 +175,24 @@ select count (*) as count_ename from manager;
 select avg(salary) as tot_salary from manager;
 select min(salary) as min_salary from manager;
 select max(salary) as max_salary from manager;
-
 ```
 
 ### OUTPUT:
+![Screenshot 2024-03-18 001935](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/e4369dd1-dd1b-4949-89ae-9f71b68f4b86)
 
+![Screenshot 2024-03-18 001939](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/7b249b51-3330-49a4-b111-48355114f5be)
+
+![Screenshot 2024-03-18 001943](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/31df707d-7bec-40e6-b776-c3dabe34e221)
 
 ### Q15) List the jobs and number of employees in each job. The result should be in the descending order of the number of employees.
 
 ### QUERY:
 ```
 select designation,enumber from manager order by designation ,enumber desc;
-
 ```
 
 ### OUTPUT:
+![Screenshot 2024-03-18 002045](https://github.com/Dhanudhanaraj/DBMS/assets/119218812/df59fb01-54b9-4856-adea-b4bfa4adb93a)
 
 
 ## RESULT :
