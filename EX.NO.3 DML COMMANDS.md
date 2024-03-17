@@ -1,4 +1,4 @@
-# EX 2 Data Manipulation Language (DML) Commands and built in functions in SQL
+# EX 3 Data Manipulation Language (DML) Commands and built in functions in SQL
 ## AIM:
 To create a manager database and execute DML queries using SQL.
 
@@ -28,15 +28,21 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### Q1) Update all the records of manager table by increasing 10% of their salary as bonus.
 
 ### QUERY:
-
-
+```
+update manager 
+set salary = salary + (salary * 10/100)
+```
 ### OUTPUT:
+
 
 ### Q2) Delete the records from manager table where the salary less than 2750.
 
 
 ### QUERY:
-
+```
+delete from manager 
+where salary < 2750
+```
 
 ### OUTPUT:
 
@@ -44,7 +50,9 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
-
+```
+select ename as "Name",salary*12 as annualsalary from manager;
+```
 
 ### OUTPUT:
 
@@ -52,7 +60,9 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
-
+```
+select ename from manager where designation = 'clerk';
+```
 
 ### OUTPUT:
 
@@ -61,7 +71,9 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
-
+```
+select ename from manager where designation != 'manager';
+```
 
 ### OUTPUT:
 
@@ -70,7 +82,10 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
+```
+select ename from manager where commission = 0;
 
+```
 
 ### OUTPUT:
 
@@ -79,7 +94,10 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
+```
+select ename from manager where ename like 'S%' or ename like '%S';
 
+```
 
 ### OUTPUT:
 
@@ -88,7 +106,10 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
+```
+select Hiredate,ename,designation,deptno from manager order by Hiredate;
 
+```
 
 ### OUTPUT:
 
@@ -97,7 +118,9 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
-
+```
+select * from manager where hiredate<to_date('1981-09-30','YYYY-MM-DD');
+```
 
 ### OUTPUT:
 
@@ -106,7 +129,10 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
+```
 
+select ename,deptno,salary from manager order by deptno,salary desc;
+```
 
 ### OUTPUT:
 
@@ -115,14 +141,20 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
+```
 
+select ename from manager where deptno != 30 and deptno != 40 and deptno != 10;
+```
 
 ### OUTPUT:
 
 ### Q13) Find number of rows in the table EMP
 
 ### QUERY:
+```
 
+select count (*) as count_ename from manager;
+```
 
 ### OUTPUT:
 
@@ -130,7 +162,12 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### Q14) Find maximum, minimum and average salary in EMP table.
 
 ### QUERY:
+```
+select avg(salary) as tot_salary from manager;
+select min(salary) as min_salary from manager;
+select max(salary) as max_salary from manager;
 
+```
 
 ### OUTPUT:
 
@@ -138,7 +175,10 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### Q15) List the jobs and number of employees in each job. The result should be in the descending order of the number of employees.
 
 ### QUERY:
+```
+select designation,enumber from manager order by designation ,enumber desc;
 
+```
 
 ### OUTPUT:
 
