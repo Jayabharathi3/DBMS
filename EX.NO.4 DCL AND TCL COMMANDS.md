@@ -19,17 +19,25 @@ To create a manager database and execute DML queries using SQL.
 ### Q1) Create a table employee with employee id ,name and Address
 
 ### QUERY:
-
-
+```SQL
+ create table employee(emp_id int,name varchar(255),address varchar(255));
+```
 ### OUTPUT:
+![image](https://github.com/Dhanudhanaraj/DBMS/assets/120367796/5d4563d9-cf73-4f76-bc22-4e24da3b72e5)
+
 
 ### Q2) Insert three rows into emploee table 
 
-
 ### QUERY:
+```SQL
 
-
+insert into employee(emp_id,name,address)values(1,'Kayal','123 Main st');
+insert into employee(emp_id,name,address)values(2,'Harshini','456 Oakst');
+insert into employee(emp_id,name,address)values(3,'Charu','345 Oak st');
+```
 ### OUTPUT:
+![image](https://github.com/Dhanudhanaraj/DBMS/assets/120367796/6ffa0c18-6b82-40ed-a2e6-5a13e1f379e2)
+
 
 ### Q3) Start the transaction and create a save point s1.
 
