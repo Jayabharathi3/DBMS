@@ -53,7 +53,15 @@ alter table student rename to student1;
 
 ![image](https://github.com/Jayabharathi3/DBMS/assets/120367796/84cd3e30-6347-4a6e-97b8-20d2ea033dd6)
 
-### 4) Drop the mystudent table
+### 4)Delete the mystudent rows using truncate keyword
+### SQL QUERY:
+```sql
+truncate table mystudent;
+```
+## OUTPUT:
+![image](https://github.com/Jayabharathi3/DBMS/assets/120367796/a2f38b60-af29-4fd0-904b-7c0b16d09c41)
+
+### 5) Drop the mystudent table
 ### SQL QUERY: 
 
 ```SQL
@@ -63,7 +71,6 @@ alter table student rename to student1;
 ### OUTPUT:
 
 ![image](https://github.com/Jayabharathi3/DBMS/assets/120367796/5f948625-f601-407a-b9c0-7833e51a999c)
-
 
 
 ## Result:
